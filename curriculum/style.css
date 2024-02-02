@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(239, 204, 201);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+h1{
+  color: darkblue;
+  background-color: rgb(136, 163, 214);
+}
+h3{
+   color: darkblue;
+   background-color: rgba(148, 176, 228, 0.409);
+   text-align: center;
+}
+p{
+  text-align: justify;
+  color: rgb(24, 57, 58);
+}
+li{
+   color: rgb(16, 48, 31);
+}
+hr{
+    color: black;
+}
+img{
+    border-radius: 10px;
+    height: 130px;
+    width: 100;
+    border: indigo solid 3px;
+
+}

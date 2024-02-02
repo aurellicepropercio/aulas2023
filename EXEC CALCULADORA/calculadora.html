@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<script>
+		//Declaração de variáveis
+var operandoA = 0;
+var operandoB = 0;
+var operador = "";
+
+//Função para limpar a calculadora
+function limpar() {
+  operandoA = 0;
+  operandoB = 0;
+  operador = "";
+}
+
+//Função para somar dois números
+function somar() {
+  resultado = operandoA + operandoB;
+  mostrarResultado(resultado);
+  console.log(somar)
+}
+
+//Função para subtrair dois números
+function subtrair() {
+  resultado = operandoA - operandoB;
+  mostrarResultado(resultado);
+}
+
+//Função para multiplicar dois números
+function multiplicar() {
+  resultado = operandoA * operandoB;
+  mostrarResultado(resultado);
+}
+
+//Função para dividir dois números
+function dividir() {
+  if (operandoB === 0) {
+    alert("Divisão por zero não é permitida.");
+  } else {
+    resultado = operandoA / operandoB;
+    mostrarResultado(resultado);
+  }
+}
+
+//Função para mostrar o resultado
+function mostrarResultado(resultado) {
+  document.getElementById("resultado").textContent = resultado;
+}
+
+//Eventos de clique nos botões
+document.getElementById("limpar").addEventListener("click", limpar);
+document.getElementById("somar").addEventListener("click", somar);
+document.getElementById("subtrair").addEventListener("click", subtrair);
+document.getElementById("multiplicar").addEventListener("click", multiplicar);
+document.getElementById("dividir").addEventListener("click", dividir);
+	
+	
+	</script>
+    
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+  <input type="number" id="operandoA" placeholder="Operando A">
+  <input type="number" id="operandoB" placeholder="Operando B">
+
+  <select id="operador">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+
+  <button id="limpar">Limpar</button>
+  <button id="somar">+</button>
+  <button id="subtrair">-</button>
+  <button id="multiplicar">*</button>
+  <button id="dividir">/</button>
+
+  <h2 id="resultado"></h2>
+  <script src="calculadora.js"></script>
+</body>
+</html>

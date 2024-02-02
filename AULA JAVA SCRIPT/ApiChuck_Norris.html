@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chuck Norris Jokes</h1>
+    <button onclick="getChuckNorrisJoke()">Obter Piada</button>
+    <br>
+    <div id="jokeContainer"></div>
+
+    <script>
+        async function getChuckNorrisJoke() {
+            const jokeContainer = document.getElementById('jokeContainer');
+            jokeContainer.innerHTML = 'Carregando...';
+
+            try {
+                const response = await fetch('https://api.chucknorris.io/jokes/random');
+                const data = await response.json();
+                const joke = data.value;
+                jokeContainer.innerHTML = `<p>${joke}</p>`;
+            } catch (error) {
+                jokeContainer.innerHTML = 'Ocorreu um erro ao obter a piada. Por favor, tente novamente mais tarde.';
+            }
+        }
+    </script>
+</body>
+</html>

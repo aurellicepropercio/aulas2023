@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo2pseudo</title> 
+    <style> 
+    body{
+        margin: 0 auto;
+        padding: 0;
+    }
+    .container{
+        width:  1024px;
+        height: 1000px;
+        background-image: linear-gradient(pink,blue,white);
+    }
+         #menuver{
+            /* pode fazer em 150px o resultado é o mesmo no width 12em; */
+            width: 12em;
+            padding: 0%;
+            margin: 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+         }
+         #menuver ul{
+            list-style: none;
+            margin: 0%;
+            padding: 0%;
+         }
+         #menuver li{
+            border-bottom: 1px solid #f00;
+            list-style: none;
+            margin: 0;
+         }
+         #menuver li a {
+            display: block;
+            padding: 5px 5px 5px 0.5em;
+            font-weight: bold;
+            border-left: 10px solid #db8d9a;
+            border-right: 10px solid #fff5ee;
+            background-color: hsl(7, 53%, 80%);
+            color: #060080;
+            text-decoration: none;
+         } 
+         #menuver li a:hover {
+            background-color: #fff0f5;
+            color: #ccc;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul id="menuver">
+           <li id="linha">
+            <a href="#" title="Entrada no site">Home</a>
+           </li>
+           <li>
+            <a href="#" title="Área de tutorial CSS">CSS tutorial</a>
+           </li>
+           <li>
+            <a href="#" title="Tecnicas de layout com CSS">CSS Layout</a>
+           </li>
+           <li>
+            <a href="#" title="Técnicas de efeitos em links">CSS Links</a>
+           </li>
+           <li>
+            <a href="#" title="Construção de menu">CSS Menu </a>
+           </li>
+           <li>
+            <a href="#" title="CSS para impressão">CSS Print</a>
+           </li>
+           <li>
+            <a href="#" title="Importação de folhas de estilo">CSS @import</a>
+           </li>
+           <li>
+            <a href="#" title="Fale conosco">Contato</a>
+           </li>
+        </ul>
+    </div>
+</body>
+</html>

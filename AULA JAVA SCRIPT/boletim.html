@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function calculoDaMedia(){
+        let nota1;
+        let nota2;
+        let nota3;
+        let nota4;
+        
+        nota1 = parseFloat(document.getElementById("n1").value);
+        nota2 = parseFloat(document.getElementById("n2").value);
+        nota3 = parseFloat(document.getElementById("n3").value);
+        nota4 = parseFloat(document.getElementById("n4").value);
+        
+        
+       let media = (nota1+nota2+nota3+nota4)/4;
+     
+        
+       if (media >= 7) {
+       alert("Aprovado com Média "+media)
+       } 
+       else if (media < 6) {
+        alert("Reprovado  com Média "+media)
+       }
+       else  {
+       alert("Recuperaçao com Média "+media);
+       }
+    }
+
+    </script>
+</head>
+<body>
+    <h1> Cálculo da media </h1>
+    
+    <input type="text" id="n1" placeholder="Digite nota1">
+    <input type="text" id="n2" placeholder="Digite nota2">
+    <input type="text" id="n3" placeholder="Digite nota3">
+    <input type="text" id="n4" placeholder="Digite nota4">
+    <input type="button" onclick="calculoDaMedia()" value="calcular">
+</body>
+</html>

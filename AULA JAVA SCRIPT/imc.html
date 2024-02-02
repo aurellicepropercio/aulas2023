@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+    function calculoIMc(){
+    let altura = parseFloat(document.getElementById("altura").value);
+    console.log(altura)
+    let peso = parseFloat(document.getElementById("peso").value);
+    console.log(peso)
+    let calculo;
+    let imc;
+
+    calculo=peso/(altura*altura);
+    imc=calculo.toFixed(2);
+    
+    if(imc<18.5){
+        alert("O seu IMC é: "+imc+" :MAGREZA");
+    }
+    else if(imc<24,9){
+        alert("O seu IMC é: "+imc+" :NORMAL") ;
+    }
+    else if(imc<29.9){
+        alert("O seu IMC é: "+imc+" :SOBREPESO") ;
+    }
+    else if(imc<39.9){
+        alert("O seu IMC é: "+imc+" :OBESIDADE") ;
+    }
+    else{
+        alert("O seu IMC é: "+imc+" :OBESIDADE GRAVE") ;
+    }
+    
+}
+       
+    </script>
+</head>
+
+<body>
+    <h1>Cálculo do IMC</h1>
+    
+    <h3>Altura (ex.: 1,70)</h3> 
+    <h3>Peso (ex.:69,2)</h3>
+    <label for="">Altura</label>    
+    <input type="text" id="altura" placeholder="digite a altura">
+    <label for="">Peso</label>
+    <input type="text" id="peso" placeholder="digite o peso">
+    <input type="button" onclick="calculoIMc()" value="calcular">
+
+</body>
+</html>
